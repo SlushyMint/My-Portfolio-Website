@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Shumin - Professional Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="antialiased">
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold text-white">MS.</a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a
+            href="assets/CV For Magang.pdf"
+            target="_blank"
+            class="nav-link font-semibold text-cyan-400 hover:text-cyan-300"
+            >Resume</a
+          >
+        </div>
+        <a
+          href="#contact"
+          class="hidden md:inline-block bg-cyan-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors duration-300"
+          >Hire Me</a
+        >
+        <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+          <i data-feather="menu" class="text-white"></i>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+        <a href="#about" class="block py-2 px-4 text-sm nav-link">About</a>
+        <a href="#education" class="block py-2 px-4 text-sm nav-link"
+          >Education</a
+        >
+        <a href="#achievements" class="block py-2 px-4 text-sm nav-link"
+          >Achievements</a
+        >
+        <a href="#projects" class="block py-2 px-4 text-sm nav-link"
+          >Projects</a
+        >
+        <a href="#skills" class="block py-2 px-4 text-sm nav-link">Skills</a>
+        <a
+          href="assets/YourResume.pdf"
+          target="_blank"
+          class="block py-2 px-4 text-sm nav-link"
+          >Resume</a
+        >
+        <a href="#contact" class="block py-2 px-4 text-sm nav-link">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center text-center overflow-hidden"
+    >
+      <canvas id="hero-canvas"></canvas>
+      <div class="relative z-10 px-4">
+        <h1
+          class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4"
+        >
+          Hi, I'm Muhammad Shumin
+        </h1>
+        <p class="text-xl md:text-2xl text-cyan-400 font-medium mb-8">
+          <span id="typing-text"></span><span class="typing-cursor"></span>
+        </p>
+        <a
+          href="#projects"
+          class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
+        >
+          View My Work
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-32 fade-in-section">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/3">
+            <img
+              src="assets/profile-pic.jpg"
+              alt="Muhammad Shumin"
+              class="rounded-full shadow-lg w-64 h-64 md:w-full md:h-auto mx-auto border-4 border-cyan-500"
+            />
+          </div>
+          <div class="md:w-2/3 text-lg text-gray-300 space-y-4">
+            <p>
+              Hello! I'm Shumin, a university student with a deep passion for
+              data and business analysis. I'm fascinated by the intersection of
+              data and strategy, and I'm constantly exploring new ways to
+              translate complex datasets into actionable business intelligence.
+            </p>
+            <p>
+              My journey began with a curiosity for understanding the 'why'
+              behind business trends, which led me to the world of data. I
+              thrive on digging into numbers to uncover patterns and
+              opportunities that drive strategic growth. I'm excited by the
+              challenge of bridging the gap between technical analysis and
+              real-world business impact, helping organizations make smarter,
+              data-driven decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 md:py-32 bg-gray-900 fade-in-section">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">My Academic Journey</h2>
+        <div class="max-w-3xl mx-auto">
+          <div class="timeline-item">
+            <div class="timeline-icon text-cyan-400">
+              <i data-feather="award"></i>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+              <span class="text-gray-400 text-sm font-semibold"
+                >2024 - 2028 (Expected)</span
+              >
+              <h3 class="text-xl font-bold text-white mt-1">
+                Bachelor of Science in Information System
+              </h3>
+              <p class="text-cyan-400 font-medium mb-4">
+                Bakrie University, Jakarta
+              </p>
+              <p class="text-gray-300">
+                Focused on software engineering principles, data science, and
+                algorithmic problem-solving.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon text-cyan-400">
+              <i data-feather="book-open"></i>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold text-white mb-2">
+                Relevant Coursework
+              </h3>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="skill-badge">Data Structures & Algorithms</span>
+                <span class="skill-badge">Web Development</span>
+                <span class="skill-badge">Database Systems</span>
+                <span class="skill-badge">Object-Oriented Programming</span>
+                <span class="skill-badge">Software Engineering</span>
+                <span class="skill-badge">Operating Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements & Certifications Section  -->
+    <section id="achievements" class="py-20 md:py-32 fade-in-section">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Achievements & Certifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div
+            class="bg-gray-800 p-6 rounded-lg flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mr-5 mt-1">
+                <i data-feather="award" class="w-8 h-8 text-cyan-400"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">
+                  HackerRank Python (Basic) Certificate
+                </h3>
+                <p class="text-gray-400">HackerRank - Issued Jan 2025</p>
+              </div>
+            </div>
+            <div class="mt-4 text-right">
+              <a
+                href="https://www.hackerrank.com/certificates/92e801896c55"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
+              >
+                View Credential
+                <i data-feather="link" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 p-6 rounded-lg flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mr-5 mt-1">
+                <i data-feather="award" class="w-8 h-8 text-cyan-400"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">
+                  Coursera Business Analysis and Process Management
+                </h3>
+                <p class="text-gray-400">Coursera - Issued May 2023</p>
+              </div>
+            </div>
+            <div class="mt-4 text-right">
+              <a
+                href="https://www.coursera.org/account/accomplishments/verify/TUKLDK7MR9JF"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
+              >
+                View Credential
+                <i data-feather="link" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+
+          <div
+            class="bg-gray-800 p-6 rounded-lg flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mr-5 mt-1">
+                <i data-feather="award" class="w-8 h-8 text-cyan-400"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">
+                  HackerRank Problem Solving (Basic) Certificate
+                </h3>
+                <p class="text-gray-400">HackerRank - Issued Feb 2025</p>
+              </div>
+            </div>
+            <div class="mt-4 text-right">
+              <a
+                href="https://www.hackerrank.com/certificates/5d06abc3265a"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
+              >
+                View Credential
+                <i data-feather="link" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 p-6 rounded-lg flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <div class="flex items-start">
+              <div class="flex-shrink-0 mr-5 mt-1">
+                <i data-feather="users" class="w-8 h-8 text-cyan-400"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">
+                  Best Student Award in Programming and Algorithms Lab 
+                </h3>
+                <p class="text-gray-400">1st Semester 2024</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 md:py-32 bg-gray-900 fade-in-section">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">My Projects</h2>
+        <div id="project-filters" class="flex justify-center gap-2 md:gap-4 mb-12">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="tailwind">Taildwind CSS</button>
+          <button class="filter-btn" data-filter="opencv">OpenCV</button>
+        </div>
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          
+          <!-- Project Card 1 -->
+          <div class="project-card" data-category="python">
+            <img src="assets/ransomware-simulation.png" alt="Project 1" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-white mb-2">Ransomware Simulation</h3>
+              <p class="text-gray-400 mb-4 flex-grow">A ransomware simulation using python an tkinter.</p>
+              <div class="mt-auto flex justify-between items-center pt-4">
+                <a href="https://github.com/SlushyMint/Ransomware-Simulation.git" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-cyan-400">
+                  <i data-feather="github" class="w-5 h-5 mr-2"></i>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card" data-category="python opencv">
+            <img src="assets/the-watcher-v2.png" alt="Project 2" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-white mb-2">The The Watcher v2.0</h3>
+              <p class="text-gray-400 mb-4 flex-grow">A motion-detection surveillance system build with python and opencv.</p>
+              <div class="mt-auto flex justify-between items-center pt-4">
+                <a href="https://github.com/SlushyMint/The-Watcher-v2.0.git" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-cyan-400">
+                  <i data-feather="github" class="w-5 h-5 mr-2"></i>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card" data-category="tailwind">
+            <img src="assets/porfolio-website.png" alt="Project 3" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-white mb-2">Portfolio Website</h3>
+              <p class="text-gray-400 mb-4 flex-grow">A personal portfolio website designed to showcase skills and projects (this one!).</p>
+              <div class="mt-auto flex justify-between items-center pt-4">
+                <a href="https://github.com/your-username/portfolio-repo" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-cyan-400">
+                  <i data-feather="github" class="w-5 h-5 mr-2"></i>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 md:py-32 fade-in-section">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">My Skills</h2>
+        <div
+          class="flex flex-wrap justify-center items-center gap-4 max-w-4xl mx-auto"
+        >
+          <span class="skill-badge">HTML5</span
+          ><span class="skill-badge">CSS3 & SCSS</span
+          ><span class="skill-badge">JavaScript</span
+          ><span class="skill-badge">Python</span
+          ><span class="skill-badge">SQL</span
+          ><span class="skill-badge">Pandas</span
+          ><span class="skill-badge">Matplotlib</span
+          ><span class="skill-badge">Seaborn</span
+          ><span class="skill-badge">Git & GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32 fade-in-section">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="max-w-2xl mx-auto text-center">
+          <p class="text-lg text-gray-400 mb-8">
+            I'm currently available for freelance work. Have a project in mind?
+            Let's talk!
+          </p>
+          <form action="https://formspree.io/f/xgvzanww" method="POST" class="space-y-6">
+            <div class="flex flex-col md:flex-row gap-6">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-cyan-500 text-white font-bold py-3 px-12 rounded-lg hover:bg-cyan-600 transition-colors duration-300 text-lg"
+            >
+              Send Message
+            </button>
+          </form>
+          <div id="form-status" class="mt-4 text-lg"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 py-8">
+      <div class="container mx-auto px-6 text-center text-gray-400">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="https://github.com/SlushyMint?tab=repositories" target = "_blank" class="hover:text-cyan-400"
+            ><i data-feather="github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/muhammad-shumin-80b411326/" target = "_blank" class="hover:text-cyan-400"
+            ><i data-feather="linkedin"></i
+          ></a>
+          <a href="#" class="hover:text-cyan-400"
+            ><i data-feather="twitter"></i
+          ></a>
+        </div>
+        <p>&copy; 2025 Muhammad Shumin. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

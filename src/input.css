@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        font-family: 'Poppins', sans-serif;
+        @apply bg-gray-900 text-gray-200;
+    }
+}
+
+@layer components {
+    .section-title {
+        @apply text-4xl font-bold text-center mb-16 relative; 
+    }
+    .section-title::after {
+        content: '';
+        @apply w-20 h-1 bg-cyan-500 absolute -bottom-3 left-1/2 -translate-x-1/2 rounded;
+    }
+    .nav-link {
+        @apply text-gray-300 hover:text-cyan-400 transition-colors duration-300;
+    }
+    .project-card {
+        @apply bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20;
+    }
+    .skill-badge {
+        @apply bg-gray-700 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold transition-transform duration-300 hover:scale-110;
+    }
+    .filter-btn {
+        @apply px-5 py-2 text-sm font-medium rounded-lg transition-colors duration-300;
+    }
+    .filter-btn.active {
+        @apply bg-cyan-500 text-white;
+    }
+    .filter-btn:not(.active) {
+        @apply bg-gray-800 text-gray-300 hover:bg-gray-700;
+    }
+
+    /* --- Styles for the Education Timeline --- */
+    .timeline-item {
+        @apply relative pl-12 pb-12;
+    }
+    .timeline-item:last-child {
+        @apply pb-0;
+    }
+    .timeline-item::before {
+        content: '';
+        @apply absolute top-0 left-4 w-0.5 h-full bg-gray-700 -translate-x-1/2;
+    }
+    .timeline-icon {
+        @apply absolute left-0 top-1 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center ring-8 ring-gray-900;
+    }
+}
+
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.4rem;
+    background-color: #22d3ee;
+    animation: blink 1s infinite;
+    margin-left: 4px;
+    position: relative;
+    top: 4px;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
